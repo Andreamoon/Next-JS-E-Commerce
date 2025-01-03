@@ -1,3 +1,4 @@
+import { Product } from "@/types";
 import ProductCard from "./product-card";
 
 const ProductList = ({
@@ -5,7 +6,7 @@ const ProductList = ({
   title,
 
 }: {
-  data: any;
+  data: Product[];
   title?: string;
 }) => {
 
