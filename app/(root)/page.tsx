@@ -1,11 +1,11 @@
-import ProductList from "@/components/shared/header/products/product-list";
-import { Button } from "@/components/ui/button";
-import sampleData from "@/db/sample-data";
+import ProductList from "@/components/shared/product/product-list";
+import { getLatestProducts } from "@/lib/actions/product.action";
 // export const metadata = { title: "Home" };
-const HomePage = () => {
+ const HomePage = async () => {
+  const latestProduct = await getLatestProducts()
   return (
     <>
-      <ProductList data={sampleData.products} title="Newest Arrivals" limit={4}/>{" "}
+      <ProductList data={latestProduct} title="Newest Arrivals"/>{" "}
     </>
   );
 };
