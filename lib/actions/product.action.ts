@@ -14,3 +14,9 @@ export async function getLatestProducts() {
 
   return convertToPlanObject(data);
 }
+
+// Get single product
+
+export async function getProductBySlug(slug: string) {
+  return await prisma.product.findFirst({ where: { slug: slug } });
+}

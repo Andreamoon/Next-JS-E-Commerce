@@ -7,7 +7,6 @@ const ProductPrice = ({
   value: number;
   className?: string;
 }) => {
-  console.log("VALUYEEEE:  ",value)
   //Ensure 3 decimal place
   const stringValue = value.toFixed(2);
 
