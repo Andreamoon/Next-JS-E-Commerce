@@ -1,7 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { getProductBySlug } from "@/lib/actions/product.action";
+import { getProductBySlug } from "@/lib/actions/product.actions";
 import { notFound } from "next/navigation";
 import ProductPrice from "@/components/shared/product/product-price";
 import ProductImages from "@/components/shared/product/product-images";
@@ -33,7 +33,7 @@ const ProductDetailsPage = async (props: {
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                 <ProductPrice
                   value={Number(product.price)}
-                  className="w-24 rounded-full bg-green-100 text-green-700 px-5 py-2"
+                  className="w-29 rounded-full bg-green-100 text-green-700 px-5 py-2"
                 />
               </div>
             </div>
